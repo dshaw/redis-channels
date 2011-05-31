@@ -12,17 +12,15 @@ exports.channels = function () {
 
 exports.subscribers = function () {
   var channels = rc.createChannels()
-    , subscriber = channels.subscribe('updates');
+    , subscriber;
 
-  channels.open('test');
-  subscriber.subscribe('test');
+  channels.open('test2');
+  subscriber = channels.subscribe('test2');
 
-  channels.open('test');
-
-  subscriber.on('test', function(data) {
+  subscriber.on('test2', function(data) {
     assert.eql(data, 'five');
   });
 
-  channels.publish('test', 'five');
-  channels.close('test')
+  channels.publish('test2', 'five');
+  channels.close('test2')
 };

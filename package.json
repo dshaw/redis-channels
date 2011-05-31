@@ -1,17 +1,17 @@
 {
     "name": "redis-channels"
-  , "version": "0.1.0alpha1"
+  , "version": "0.1.0"
   , "author": "Daniel D. Shaw <dshaw@dshaw.com> (http://dshaw.com)"
   , "repository": {
       "type": "git"
     , "url": "git://github.com/dshaw/redis-channels.git"
   }
   , "dependencies": {
-      "hiredis": "*"
-    , "redis": "*"
+      "hiredis": ">=0.1.10  <0.2"
+    , "redis": ">=0.6.0  <0.7"
     }
   , "devDependencies": {
-      "expresso": "*"
+      "expresso" : ">=0.7.6 <0.8"
     }
   , "scripts" : {
         "test" : "expresso"
